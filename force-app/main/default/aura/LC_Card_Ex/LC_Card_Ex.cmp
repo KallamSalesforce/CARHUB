@@ -1,0 +1,3 @@
+<aura:component >
+    <lightning:card title="Amount" IconName="standard:orders"/>	
+</aura:component>

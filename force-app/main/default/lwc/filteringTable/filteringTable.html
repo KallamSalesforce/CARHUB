@@ -1,0 +1,31 @@
+<template>
+    <lightning-card title="Demo FilteringTable">
+        <div class="">
+           <lightning-layout>
+               <lightning-layout-item size="2">
+                   <lightning-input type="text" label="FIlter" onchange={filterHandler}></lightning-input>
+               </lightning-layout-item>
+              
+           </lightning-layout>
+            <table>
+                <thead>
+                   <tr>
+                       <template for:each={headings} for:item="heading">
+                           <td key ={heading}>{heading}</td>
+                       </template>
+                   </tr>
+                </thead>
+                <tbody>
+                    <template for:each={fullTabledata} for:item="data">
+                        <tr key={data.Id}>
+                             <td>{data.Name}</td>
+                             <td>{data.Id}</td>
+                             <td>{data.Email}</td>
+                             <td>{data.Title}</td>
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,14 @@
+<apex:page controller="SearchrecordPageController" setup="false" sidebar="false" title="true">
+ <apex:sectionHeader title="Search Record Page" subtitle="Search Record"/>
+  <apex:form >
+   <apex:pageBlock title="Search Records Page">
+    <apex:pageBlockSection collapsible="false" columns="2">
+     <apex:inputText label="Search Text" value="{!SearchText}"/>     
+    </apex:pageBlockSection>
+    <apex:pageblockButtons location="bottom">
+     <apex:commandButton value="Search Records" action="{!getSearchResultPage}"/>
+    </apex:pageblockButtons>
+   </apex:pageBlock>
+  </apex:form>
+  
+</apex:page>

@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Get CheckBox Values">
+        <!-- <lightning-checkbox-group name="Checkbox Group"
+        label="Checkbox Group"
+        options={options}
+        value={value}
+        onchange={handleChange}></lightning-checkbox-group>
+<p>Selected Values are: {selectedValues}</p> -->
+
+<lightning-combobox
+            name="progress"
+            label="Status"
+            value=""
+            placeholder="Select option from dropdown"
+            options={options}
+            onchange={handleChange}
+            
+    ></lightning-combobox>
+    <p>Selected value is: {value}</p>
+    </lightning-card>
+</template>

@@ -1,0 +1,19 @@
+<apex:page action="{!getRecords}" controller="CustomWrapperDetailsControlle" sidebar="false" setup="false" showHeader="false">
+  <apex:sectionHeader title=" Custom Wrapper" subtitle="Accounts leads Wrapper"/>
+   <apex:form >
+     <apex:pageBlock title="Custom Wrapper Block">
+       <apex:pageBlockTable value="{!lstWrapper}" var="wr">
+        <apex:column headerValue="Record Name"> 
+          <apex:outputLink value="{!wr.recordID}" target="_blank"> {!wr.firstName}{!wr.lastName} </apex:outputLink>
+        </apex:column>
+        <apex:column value="{!wr.designation}" headerValue=" Designation"/>
+        <apex:column value="{!wr.phoneNumber}" headerValue="Phone Number"/>
+        <apex:column value="{!wr.faxNumber}" headerValue="Fax Number"/>
+        <apex:column value="{!wr.RatingValue}" headerValue="Rating"/>
+        <apex:column value="{!wr.annualrevenue}" headerValue="Annual Revenue"/>
+        <apex:column value="{!wr.industry}" headerValue="Industry"/>
+        <apex:column value="{!wr.titleName}" headerValue="Title"/>
+       </apex:pageBlockTable>
+     </apex:pageBlock>
+   </apex:form>
+</apex:page>

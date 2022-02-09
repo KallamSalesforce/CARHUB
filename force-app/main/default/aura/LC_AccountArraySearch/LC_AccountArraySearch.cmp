@@ -1,0 +1,28 @@
+<aura:component controller="Get_Accs_BYSearchText">
+    <aura:attribute name="acc" type="Account[]"/>
+    <aura:attribute name="st" type="string"/>
+    
+    <lightning:card title="Search Account">
+        <lightning:layout>
+            <lightning:layoutItem size="6">
+                <lightning:input label="Enter the Search Text" value="{!v.st}" />
+            </lightning:layoutItem>
+            <lightning:layoutItem size="6">
+                <lightning:button label="search" onclick="{!c.showMe}" />
+            </lightning:layoutItem>
+        </lightning:layout>
+        
+        <lightning:layout multipleRows="true">            
+            <aura:iteration items="{!v.acc}" var="a">                
+                <lightning:layoutItem size="3" padding="around-small">
+                    <div class="box">
+                    Name :{!a.Name}  <br/>
+                    Phone: {!a.Phone}    <br/>
+                    Industry :{!a.industry}  <br/>
+                    </div>    
+                </lightning:layoutItem>                   
+            </aura:iteration>                
+        </lightning:layout>
+    </lightning:card>
+    
+</aura:component>

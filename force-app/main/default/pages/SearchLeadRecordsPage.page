@@ -1,0 +1,19 @@
+<apex:page setup="false" sidebar="false" tabStyle="Case" controller="SearchLeadRecordPageController">
+  <apex:sectionHeader title="Search Lead Records" subtitle="Lead records"/>
+    <apex:form >
+      <apex:pageBlock title="Lead records Search with key words">
+        <apex:pageBlockSection columns="4" collapsible="true" >
+         <apex:inputText label="LastName" value="{!FirstName}"/>
+         <apex:inputText label="FirstName" value="{!SecondName}"/>
+         <apex:commandButton value="Go" action="{!getFirstNameResults}"/>
+        </apex:pageBlockSection> 
+      </apex:pageBlock>
+      <apex:pageBlock title="Get Lead results ({!ListLead.size})">
+         <apex:pageBlockTable value="{!ListLead}" var="ld">
+          <apex:column value="{!ld.firstName}" />
+          <apex:column value="{!ld.Lastname}"/>
+         </apex:pageBlockTable>
+      </apex:pageBlock>
+    </apex:form>
+ 
+</apex:page>

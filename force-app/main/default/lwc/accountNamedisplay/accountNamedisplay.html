@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Account Names are">
+       <template if:true={info}>
+           <p>Display Test</p>
+           <template for:each={info} for:item="s">
+             <div key={s.Id}>
+                <a href="#" onclick={clickHandler} data-accountid={s.Id} >{s.Name} </a> 
+            </div>
+           </template>
+           <c-getrelated-contact-records account-id={accountIdfromParent}></c-getrelated-contact-records>
+         <!-- <template for:each={info} for:item="info">
+             <div key={info.Id}>{info.Name}</div>
+         </template> -->
+       </template>
+    </lightning-card>
+</template>

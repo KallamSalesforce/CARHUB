@@ -1,0 +1,14 @@
+<aura:component >
+    <lightning:card title="Caluculator By Aura:id">
+        <aura:set attribute="footer">
+            <lightning:button label="ADD" onclick="{!c.callme}" aura:id="add"/>
+            <lightning:button label="SUB" onclick="{!c.callme}" aura:id="sub"/>
+            <lightning:button label="MUL" onclick="{!c.callme}" aura:id="mul"/>
+        </aura:set>
+        <lightning:input label="Enter First Number" aura:id="fnum" />
+        <lightning:input label="Enter Second Number" aura:id="snum" />
+        <lightning:input label="Display Result" aura:id="res" />
+        
+    </lightning:card>
+   
+</aura:component>

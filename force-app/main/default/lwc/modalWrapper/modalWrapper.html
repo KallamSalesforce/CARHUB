@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Modal Window Demo">
+       
+        <lightning-button label="Modal" variant="brand" onclick={clickHandler}>         
+        </lightning-button>
+    </lightning-card>
+    <template if:true={ModalWindow}>
+        <c-modal onclickicon ={closeHandler}>
+           <!-- <h1 slot="Title"> This is Header</h1> -->
+           <p>Hi This demo for Modal Window-- Body Text </p>
+           <div slot="footer"> 
+               <p>This is Footer Component</p>
+             <button class="slds-button slds-button_neutral" onclick={closeHandler}>Cancel</button>
+             <button class="slds-button slds-button_brand">Save</button>
+           </div>
+        </c-modal>
+    </template>
+</template>

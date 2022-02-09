@@ -1,0 +1,25 @@
+<apex:page setup="false" sidebar="false" controller="DynamicAccNameSearchController" tabStyle="Case">
+  <apex:sectionHeader title="Search Accounts" Subtitle="Account Records search"/>
+    <apex:form >
+      <apex:pageMessages id="errors"></apex:pageMessages>
+      <apex:pageBlock title="Seach Account Name">
+       <apex:pageBlockSection title="Search Account Records" collapsible="true" columns="2">
+         <apex:inputText label="Enter Search Text" html-placeholder="Enter Search Text" value="{!searchText}"/>
+          <apex:commandButton value="Search Records" action="{!searchAccountRecords}" reRender="pgBlock,errors"/>
+            
+       </apex:pageBlockSection>
+   </apex:pageBlock>
+   <apex:pageBlock title="Total Number of Serach Results :({!ListAcc.size})" id="pgBlock">
+    <apex:pageBlockTable value="{!ListAcc}" var="acc">
+    <apex:column headerValue="Account Name">
+         <apex:outputLink value="/{acc.id}" target="_blank">{!acc.name}</apex:outputLink>
+    </apex:column>
+     <apex:column value="{!acc.rating}"/>
+     <apex:column value="{!acc.industry}"/>
+     <apex:column value="{!acc.annualrevenue}"/>
+     <apex:column value="{!acc.type}"/>
+     <apex:column value="{!acc.website}"/>
+    </apex:pageBlockTable>
+   </apex:pageBlock>
+    </apex:form>
+</apex:page>

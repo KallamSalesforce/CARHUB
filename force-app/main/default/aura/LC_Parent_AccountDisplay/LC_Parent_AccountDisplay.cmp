@@ -1,0 +1,15 @@
+<aura:component >
+    <aura:attribute name="accounts" type="List" default="[]" />
+    <aura:attribute  name="acolumn" type="List" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.CallMe}" />
+    <aura:handler name="rupom" event="c:LE_AccountCreationEvent" action="{!c.showMe}" />
+    <div class="box">
+    <c:LC_Child_AccountCreationEvent />
+        </div>
+    
+    <br/>  <br/> <br/>
+    
+    <lightning:dataTable keyField="id" data="{!v.accounts}" columns="{!v.acolumn}" />
+    
+</aura:component>

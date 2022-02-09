@@ -1,0 +1,30 @@
+<template>
+    <lightning-card title="Get All Contacts List">
+        <div class="slds-var-m-around_medium">
+            <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Title</th>
+                    </tr>
+                </thead>
+                <tbody>
+                  <template for:each={contacts} for:item="item">
+                      <tr key={item.fields.Id.value}>
+                          <td>{item.fields.Name.value}</td>
+                          <td>{item.fields.Email.value}</td>
+                          <td>{item.fields.Title.value}</td>
+                      </tr>                      
+                  </template>
+                </tbody>
+            </table>            
+        </div>
+        <div class="slds-m-around_medium">
+            <lightning-button label="Previous" onclick={hadlePreviousPage}></lightning-button>
+        </div>            
+        <div class="slds-m-around_medium">
+            <lightning-button label="Next" onclick={hadleNextPage}></lightning-button>
+        </div>
+    </lightning-card>
+</template>

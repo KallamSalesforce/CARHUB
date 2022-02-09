@@ -1,0 +1,32 @@
+<aura:component >
+    <aura:attribute name="pri" type="Decimal"/>
+    <aura:attribute name="time" type="Decimal"/>
+    <aura:attribute name="rate" type="Decimal"/>
+    <aura:attribute name="Res" type="Decimal"/>
+    <aura:attribute name="flag" type="boolean" default="true"/>
+    
+    <lightning:card title="simple Interest" class="ltgcrd">
+        <aura:set attribute="actions">
+            <lightning:button label="Submit" onclick="{!c.callme}" class="but"/>
+        </aura:set>
+        <lightning:input label="Enter Amount" value="{!v.pri}"/>
+        <lightning:input label="Enter Time" value="{!v.time}"/>
+        <lightning:input label="Enter Rate of Interest" value="{!v.rate}"/>
+    </lightning:card>
+    
+   
+    <aura:if isTrue="{!v.flag}">
+    
+        <div class="lg">
+            <img src="{!$Resource.logo}" height="150" width="250" />
+        </div>
+        <div class="box">
+        Amount :{!v.pri}  <br/>
+        Time   :{!v.time} <br/>
+        rate   :{!v.rate} <br/>
+        Result :{!v.Res}  <br/>
+        </div>      
+      
+    </aura:if>
+   
+</aura:component>

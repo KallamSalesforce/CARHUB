@@ -1,0 +1,19 @@
+<apex:page setup="false" sidebar="false" title="true" tabStyle="Case" controller="BasicCaluculatorController">
+  <apex:SectionHeader title="Calculator" subtitle="Basic Caluculator"/>
+     <apex:form >
+       <apex:pageMessages id="Errors"></apex:pageMessages>
+         <apex:pageBlock title="Basic caluculator Book" >
+          <apex:pageBlockButtons location="bottom" >
+           <apex:commandButton value="ADD" action="{!Add}" rerender="res,Errors"/>
+           <apex:commandButton value="SUB" action="{!Sub}" rerender="res,Errors"/>
+           <apex:commandButton value="MUL" action="{!Mul}" reRender="res,Errors"/>
+           <apex:commandButton value="Div" action="{!Div}" reRender="res,Errors"/>
+          </apex:pageBlockButtons>
+         <apex:pageBlockSection title="Caluculator Section" columns="1" collapsible="true">
+          <apex:inputText label="Enter the first Value" html-placeholder="Enter First Number" value="{!firstNumber}"/>
+          <apex:inputText label="Enter Second Value" html-placeholder="Enter SecondNumber" value="{!SecondNumber}"/>
+          <apex:outputLabel id="res">Result of both Numbers is ....:{!result}</apex:outputLabel>
+         </apex:pageBlockSection>
+       </apex:pageBlock>
+     </apex:form>
+</apex:page>

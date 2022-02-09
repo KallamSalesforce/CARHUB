@@ -1,0 +1,19 @@
+<apex:page controller="SearchResultPageController" setup="false" sidebar="false" title="true">
+ <apex:sectionHeader title="SearchResultPage" subtitle="SearchResults"/>
+   <apex:form >
+    <apex:pageBlock title="Search result Records :()">
+      <apex:pageBlockButtons location="top">
+       <apex:commandButton value="Search Again" action="{!getSearcgRecordPage}"/>
+      </apex:pageBlockButtons>
+      <apex:pageBlockTable value="{!liLead}" var="li">
+       <apex:column headerValue="Lead Name">
+          <apex:outputLink value="/{!li.id}" target="_blank">{!li.firstname}{!li.lastname}</apex:outputLink>
+       </apex:column>
+       <apex:column value="{!li.annualrevenue}"/>
+       <apex:column value="{!li.company}"/>
+      </apex:pageBlockTable>
+    </apex:pageBlock>
+   </apex:form>
+ 
+ 
+</apex:page>

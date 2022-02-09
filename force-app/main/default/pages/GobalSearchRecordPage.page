@@ -1,0 +1,22 @@
+<apex:page controller="GlobalSearchRecordController" sidebar="false" setup="false"  showHeader="true" tabStyle="Contact">
+ <apex:sectionHeader title="Search" subtitle="Global Search"/>
+   <apex:form >
+    <apex:pageblock title="Global Search" >
+     <apex:pageBlockSection title="Search Records" collapsible="true">
+      <apex:inputText label="Enter the search keyword" html-placeholder="enter search keyword"/>
+      <apex:commandButton value="search"/>
+     </apex:pageBlockSection>
+    </apex:pageblock>
+    
+    <apex:pageBlock title="Matcing Accounts : ()">
+    </apex:pageBlock>
+    
+    <apex:pageBlock title="Matcing Contacts : ()">
+    </apex:pageBlock>
+    
+    <apex:pageBlock title="Matcing Leads : ()">
+    </apex:pageBlock>
+    
+   </apex:form>
+  
+</apex:page>

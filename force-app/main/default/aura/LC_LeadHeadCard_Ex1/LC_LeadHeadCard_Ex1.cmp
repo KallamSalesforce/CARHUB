@@ -1,0 +1,27 @@
+<aura:component >
+	<lightning:card iconName="standard:lead">
+        <aura:set attribute="actions">
+            <lightning:button label="follow"/>
+            <lightning:buttonGroup>
+                <lightning:button label="New Case"/>
+                <lightning:button label="New Note"/>
+                <lightning:button label="Submit for Approval"/>
+            </lightning:buttonGroup>
+            <lightning:buttonMenu alternativeText="menu">
+              <lightning:menuItem value="nopp" label="New Opprtunity" />
+              <lightning:menuSubHeader label ="DML" />
+                <lightning:menuItem value="edi" label="Edit" />
+                <lightning:menuItem value="del" label="Delete" />
+            </lightning:buttonMenu>
+        </aura:set>
+        <aura:set attribute="title" >
+            Lead
+           <h1><b> MS.Bethra Box</b></h1> 
+        </aura:set>
+        <aura:set attribute="body">
+            Title
+            Company
+            Phone
+        </aura:set>
+    </lightning:card>
+</aura:component>

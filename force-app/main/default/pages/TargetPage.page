@@ -1,0 +1,11 @@
+<apex:page controller="TargetPageController" setup="false" sidebar="false" title="true">
+ <apex:sectionHeader title="Target Page" subtitle="Target Page"/>
+  <apex:form >
+   <apex:pageBlock title="taget Page Title">
+    <apex:pageBlockButtons location="top">
+     <apex:commandButton value="Previous" action="{!getsourcePage}"/>
+    </apex:pageBlockButtons>
+   </apex:pageBlock>
+  </apex:form>
+  
+</apex:page>

@@ -1,0 +1,20 @@
+<aura:component >
+    
+    <aura:attribute name="firstNum" type="integer"/>
+    <aura:attribute name="SecondNum" type="integer" />
+    <aura:attribute name="Result" type="integer" />
+    
+    <lightning:card title="Caluculator" iconName="standard:account">
+    <lightning:input label = "enter First Number" value="{!v.firstNum}"/>
+    <lightning:input label = "enter Second Number" value="{!v.SecondNum}"/>
+    <lightning:input label = "Here is the Result" value="{!v.Result}"/>
+    
+    <aura:set attribute="actions">
+    <lightning:buttonGroup>      
+            <lightning:button label="ADD" onclick="{!c.AddFun}"/>
+            <lightning:button label="SUB" onclick="{!c.SubFun}"/>
+            <lightning:button label="MUL" onclick="{!c.MULFun}"/>        
+    </lightning:buttonGroup>
+    </aura:set>  
+    </lightning:card> 
+</aura:component>

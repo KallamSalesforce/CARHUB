@@ -1,0 +1,4 @@
+<aura:event type="APPLICATION" description="Event template">
+    <aura:attribute name="acc" type="Account" />
+    <aura:attribute name="aid" type="String"/>
+</aura:event>

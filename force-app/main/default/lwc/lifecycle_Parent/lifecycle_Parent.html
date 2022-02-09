@@ -1,0 +1,18 @@
+<template >
+    <lightning-card title="Life Cycle Hook Parent Card">
+        <template if:true={isChildVisible}>
+            <lightning-button variant="brand" label="Remove child" onclick={handleClick}></lightning-button>
+            
+        </template>
+        <template if:false={isChildVisible}>            
+            <lightning-button variant="brand" label="Show child" onclick={handleClick}></lightning-button>           
+        </template>
+      <template if:true={isChildVisible}>
+        <c-lifecycle-child></c-lifecycle-child>
+      </template>
+      <div>
+        My div : {variable}
+      </div>
+    </lightning-card>
+    
+</template>

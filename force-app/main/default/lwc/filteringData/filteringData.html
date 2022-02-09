@@ -1,0 +1,30 @@
+<template>
+    <lightning-card title="Display Table for Account">
+        <lightning-input type="text" label="Search by Text" onchange={onchangeEvent}></lightning-input>
+        <table border="1"  cellpadding="5" cellspacing="0" style="border-collapse:collapse;" class="lwsTablePad">
+            <thead>
+                <tr>
+                    <th>Account Name</th>
+                    <th>Phone</th>
+                    <th>Rating</th>
+                    <th>Id</th>
+                    <th>Industry</th>
+                </tr>
+            </thead>
+            <tbody>
+                <template if:true={filteredData}>
+                   <template for:each={filteredData} for:item="data">
+                       <tr key={data.Id}>
+                           <td>{data.Name}</td>
+                           <td>{data.Phone}</td>
+                           <td>{data.Rating}</td>
+                           <td>{data.Id}</td>
+                           <td>{data.Industry}</td>
+
+                       </tr>
+                   </template>
+                </template>
+            </tbody>
+        </table>
+    </lightning-card>
+</template>

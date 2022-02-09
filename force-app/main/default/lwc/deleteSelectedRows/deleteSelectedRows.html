@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Delete selected Rows">
+        <lightning-datatable 
+        key-field="id"
+        data={getDetials}
+        columns={columns} onrowselection={onselctedRowHandler}
+        >
+            
+        </lightning-datatable>
+        <div class="slds-m-around_medium">
+            <lightning-button label="DeleteSelectedRecords" variant="brand" onclick={ClickDeleteRecords}></lightning-button>
+        </div>
+        
+    </lightning-card>
+</template>

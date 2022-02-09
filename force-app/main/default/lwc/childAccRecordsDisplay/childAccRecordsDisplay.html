@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="Diplay Related Contact Details and By selecting Radio Button Display Related Contacts">
+        <table>
+            <thead>
+                <tr>
+                    <th>Select</th>
+                    <th>Acc Name</th>
+                    <th>Acc Type</th>
+                    <th>Acc Industry</th>
+                </tr>
+            </thead>
+            <tbody>
+               <template for:each={accDetails} for:item="details">
+                  <tr key={details.Id}>
+                      <td><lightning-input type="radio" name="radioButtonSelect" value={details.Id} onchange={SelectHandler}></lightning-input></td>
+                      <td>{details.Name}</td>
+                      <td>{details.Type}</td>
+                      <td>{details.Industry}</td>
+                  </tr>
+               </template>
+            </tbody>
+        </table>
+    </lightning-card>
+</template>

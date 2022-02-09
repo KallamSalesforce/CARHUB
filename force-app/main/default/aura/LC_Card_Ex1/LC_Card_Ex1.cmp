@@ -1,0 +1,22 @@
+<aura:component >
+	<lightning:card iconName="standard:account">
+        <aura:set attribute="actions">
+            <lightning:buttonGroup>
+                <lightning:button label="submit"/>
+                <lightning:button label="New Contact"/>
+                 <lightning:button label="New Case"/>
+                 <lightning:button label="New Note"/>
+            </lightning:buttonGroup>
+          <lightning:buttonMenu alternativeText="menu">
+              <lightning:menuItem value="nopp" label="New Opprtunity" />
+              <lightning:menuSubHeader label ="DML" />
+                <lightning:menuItem value="edi" label="Edit" />
+                <lightning:menuItem value="del" label="Delete" />
+            </lightning:buttonMenu>  
+        </aura:set>
+        <aura:set attribute="title">
+            Account Information
+            <h1><b>Burlington Textiles crop of America</b></h1>
+        </aura:set>
+    </lightning:card>
+</aura:component>

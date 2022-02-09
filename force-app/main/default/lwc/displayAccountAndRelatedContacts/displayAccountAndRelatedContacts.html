@@ -1,0 +1,81 @@
+<template>
+    <lightning-card title="Wrapper Class in LWC">
+        <lightning-button variant="brand" label="displayAccsContacts" title="Primary action" onclick={handleClick} class="slds-m-left_x-small" >
+
+        </lightning-button>  
+        <lightning-button variant="brand" label="displayContactsByAccName" title="Primary action" onclick={handleClick1} class="slds-m-left_x-small" >
+
+        </lightning-button>      
+        <template if:true={getdisplayTable}>
+        <template if:true={info}>
+            <table class="slds-table slds-table_bordered slds-table_cell-buffer slds-table_col-bordered">
+                <thead>
+                    <tr class="slds-text-title_caps">
+                        <th scope="col">
+                            <div title="Key">Account Name</div>
+                        </th>
+                        <th scope="col">
+                            <div title="Value">Account Related Contacts</div>
+                        </th>
+                        <th scope="col">
+                            <div title="Value">Contact Size</div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <template for:each={info} for:item="keyValue">
+                        <tr key={keyValue.Id}>
+                            <th scope="col">
+                                <div>{keyValue.objAcc.Name}</div>
+                            </th>
+                            <th scope="col">
+                                <template for:each={keyValue.lstCons} for:item="con">
+                                    <div key={con.Id}>{con.Name}</div>
+                                </template>
+                            </th>
+                            <th scope="col">
+                                <div>{keyValue.conSize}</div>
+                            </th>
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+        </template>
+    </template>
+    
+    <template if:true={getContRecordsByAccName}>
+        <p>Want to diaplay Contact Records by Using Account Name</p>
+        <lightning-layout>
+            <div class="slds-p-around_medium lgc-bg">
+            <lightning-layout-item size='4'>                
+                    <lightning-input type="text" label="Enter AccountName" value={accountName} onchange={onChangehandler} ></lightning-input>                
+            </lightning-layout-item> 
+            <lightning-layout-item size='4'>
+                <lightning-button variant="brand" label="searchAccountName" onclick={handleclickEvent}></lightning-button>
+            </lightning-layout-item> 
+            </div>          
+        </lightning-layout> 
+        <template if:true={contactsinfo}>
+            <table>
+                <thead>
+                    <tr>
+                        <th title="ContactLastName">LastName</th>
+                        <th title="ContactFirstName">FirstName</th>
+                        <th title="ContactEmail">Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <template for:each={contactsinfo} for:item="conInfo">
+                        <tr key={conInfo.Id}>
+                            <th>{conInfo.LastName}</th>
+                            <th>{conInfo.FirstName}</th>
+                            <th>{conInfo.Email}</th>
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+            
+        </template>       
+    </template>
+    </lightning-card>
+</template>

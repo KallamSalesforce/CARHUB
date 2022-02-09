@@ -1,0 +1,19 @@
+<apex:page action="{!GetRecords}" controller="ShowAllCaseRecordsController" setup="false" sidebar="false" showHeader="true" >
+  <apex:sectionHeader title="Cases" Subtitle="All Cases"/>
+    <apex:form >
+        <apex:actionPoller action="{!GetRecords}" interval="5" reRender="err"/>
+      <apex:pageBlock title="All Cases : ( {!li.size})" id="err">
+        <apex:pageBlockTable value="{!li}" var="LiCase">
+          <apex:column headerValue="Case Number">
+            <apex:outputLink value="/{!LiCase.id}" target="_blank">{!LiCase.CaseNumber}</apex:outputLink>
+          </apex:column>
+          <apex:column value="{!LiCase.status}" headerValue="Status"/>
+          <apex:column value="{!LiCase.origin}" headerValue="Case Origin"/>
+          <apex:column value="{!LiCase.priority}" headerValue="Priority"/>
+          <apex:column value="{!LiCase.subject}" headerValue="Subject"/>
+         
+        </apex:pageBlockTable>
+      </apex:pageBlock>
+    </apex:form>
+  
+</apex:page>

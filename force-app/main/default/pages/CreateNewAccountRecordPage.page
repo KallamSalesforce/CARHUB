@@ -1,0 +1,4 @@
+<apex:page sidebar="false" setup="false" title="true" controller="CreateNewAccountRecordController" action="{!CreateAcc}">
+ 
+ {!recordResults}
+</apex:page>

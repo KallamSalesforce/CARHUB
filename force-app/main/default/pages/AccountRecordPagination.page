@@ -1,0 +1,26 @@
+<apex:page controller="AccountRecordpaginationController" setup="false" sidebar="false" title="true">
+ <apex:sectionHeader title="AccountRecords" subtitle="AccRecordsPagination"/>
+  <apex:form >
+   <apex:pageBlock Title="Account Records Display Pagination">
+    
+     <apex:pageBlockTable value="{!accounts}" var="acc" id="Err">  
+         <apex:column headerValue="Accont name">
+            <apex:outputLink value="/{!acc.id}" target="_blank" >{!acc.name} </apex:outputLink>
+          </apex:column>
+       <apex:column value="{!acc.rating}"/>  
+       <apex:column value="{!acc.annualrevenue}"/> 
+       <apex:column value="{!acc.fax}"/>
+       <apex:column value="{!acc.phone}"/>  
+     </apex:pageBlockTable>
+      <br/><br/>
+      <center> <b>
+      <apex:commandLink value="First" action="{!setController.First}" reRender="Err"/>&nbsp;&nbsp;&nbsp;
+      <apex:commandLink value="Previous" action="{!setController.Previous}" reRender="Err"/>&nbsp;&nbsp;&nbsp;
+      <apex:commandLink value="next" action="{!setController.next}" reRender="Err"/>&nbsp;&nbsp;&nbsp;
+      <apex:commandLink value="Last" action="{!setController.Last}" reRender="Err"/>&nbsp;&nbsp;&nbsp;
+      </b>
+      </center>
+   </apex:pageBlock>
+  </apex:form>
+  
+</apex:page>

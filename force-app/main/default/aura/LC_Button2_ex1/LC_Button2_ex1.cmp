@@ -1,0 +1,17 @@
+<aura:component >
+      <lightning:buttonIcon iconName="utility:setup" alternativeText="set up" variant="bare"/>
+    <lightning:buttonIcon iconName="utility:notification" alternativeText="Show More" variant="bare"/>
+    <lightning:buttonIcon iconName="utility:help" alternativeText="Show More" variant="bare"/>
+    <lightning:buttonMenu alternativeText="Menu">
+        <lightning:menuItem value="opp" label="New Opprtunity" />
+     <lightning:menusubHeader label="DML"/>
+        <lightning:menuitem value="edit" label="EDIT" />
+        <lightning:menuitem value="delete" label="DEL" />
+     <lightning:menusubHeader label="Names"/>
+        <lightning:menuitem value="edit" label="Kallam" />
+        <lightning:menuitem value="delete" label="SRIRAM" />
+    </lightning:buttonMenu>
+       
+    
+      
+</aura:component>

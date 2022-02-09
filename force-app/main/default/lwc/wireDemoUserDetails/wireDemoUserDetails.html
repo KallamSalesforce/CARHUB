@@ -1,0 +1,17 @@
+<template>
+   <lightning-card title="Demo User Details by using WIRE AS Function">
+       <div class = 'slds-var-p-around_medium'>        
+        <template if:true={userDetails}>
+           <div> Name is ----- {userDetails.Name.value} </div>
+           <div>  Email is --- {userDetails.Email.value}   </div>
+        </template>
+       </div>   
+       
+       <div class = 'slds-var-p-around_medium'>        
+        <template if:true={userDetailsProperty.data}>
+           <div> Name is ------ {userDetailsProperty.data.fields.Name.value} </div>
+           <div>  Email is ---  {userDetailsProperty.data.fields.Email.value}   </div>
+        </template>
+       </div>   
+   </lightning-card> 
+</template>

@@ -1,0 +1,23 @@
+<template>
+    <c-child-acc-records-display onselectaccbyradiobutton={clickHadler}></c-child-acc-records-display>
+    <lightning-card title='Display selected Acc Related Contact details'>
+        <table>
+            <thead>
+                <tr>
+                    <th>Contact FName</th>
+                    <th>Contact LName</th>
+                    <th>Contact Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <template for:each={getcondetails} for:item="data">
+                    <tr key={data.Id}>
+                        <td>{data.FirstName}</td>
+                        <td>{data.LastName}</td>
+                        <td>{data.Email}</td>
+                    </tr>
+                </template>
+            </tbody>
+        </table>
+    </lightning-card>
+</template>

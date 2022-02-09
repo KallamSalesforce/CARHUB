@@ -1,0 +1,52 @@
+<apex:page sidebar="false" setup="false" showHeader="true" tabStyle="Contact">
+  <apex:sectionHeader title="PickList Control" subtitle="Input Control"/>
+   <apex:form >
+     <apex:pageBlock title="Single Pick List Control">
+     <apex:pageBlockSection title="Single Option Picklist" collapsible="true">
+      <apex:selectList label="Select the country" size="1">
+      <apex:selectOption itemLabel="India" itemvalue="Ind"></apex:selectOption>
+      <apex:selectOption itemLabel="America" itemvalue="USA"></apex:selectOption>
+      <apex:selectOption itemLabel="Australia" itemvalue="AUS"></apex:selectOption>
+      <apex:selectOption itemLabel="Britan" itemvalue="UK"></apex:selectOption>
+      <apex:selectOption itemLabel="China" itemvalue="CHn"></apex:selectOption>
+      </apex:selectList>           
+      </apex:pageBlockSection>
+      
+      <apex:pageBlockSection title="Multiselect Option Picklist" collapsible="true">
+      <apex:selectList label="Select your hobbies" multiselect="true" size="3">
+      <apex:selectOption itemLabel="cricket" itemvalue="Ind"></apex:selectOption>
+      <apex:selectOption itemLabel="chess" itemvalue="USA"></apex:selectOption>
+      <apex:selectOption itemLabel="tenneis" itemvalue="AUS"></apex:selectOption>
+      <apex:selectOption itemLabel="hockey" itemvalue="UK"></apex:selectOption>
+      <apex:selectOption itemLabel="skateing" itemvalue="CHn"></apex:selectOption>
+      <apex:selectOption itemLabel="Football" itemvalue="CHn"></apex:selectOption>
+      </apex:selectList>           
+      </apex:pageBlockSection>
+      
+      <apex:pageBlockSection title="Checkbox Option Picklist" collapsible="true">
+      <apex:selectCheckboxes label="Select your hobbies" borderVisible="true">
+      <apex:selectOption itemLabel="cricket" itemvalue="Ind"></apex:selectOption>
+      <apex:selectOption itemLabel="chess" itemvalue="USA"></apex:selectOption>
+      <apex:selectOption itemLabel="tenneis" itemvalue="AUS"></apex:selectOption>
+      <apex:selectOption itemLabel="hockey" itemvalue="UK"></apex:selectOption>
+      <apex:selectOption itemLabel="skateing" itemvalue="CHn"></apex:selectOption>
+      <apex:selectOption itemLabel="Football" itemvalue="CHn"></apex:selectOption>
+      </apex:selectCheckboxes>          
+      </apex:pageBlockSection>
+      
+      <apex:pageBlockSection title="Radio button Option Picklist" collapsible="true">
+      <apex:selectRadio label="Select your hobbies">
+      <apex:selectOption itemLabel="cricket" itemvalue="Ind"></apex:selectOption>
+      <apex:selectOption itemLabel="chess" itemvalue="USA"></apex:selectOption>
+      <apex:selectOption itemLabel="tenneis" itemvalue="AUS"></apex:selectOption>
+      <apex:selectOption itemLabel="hockey" itemvalue="UK"></apex:selectOption>
+      <apex:selectOption itemLabel="skateing" itemvalue="CHn"></apex:selectOption>
+      <apex:selectOption itemLabel="Football" itemvalue="CHn"></apex:selectOption>
+      </apex:selectRadio>          
+      </apex:pageBlockSection>
+      
+     </apex:pageBlock>
+   </apex:form>
+  
+  
+</apex:page>

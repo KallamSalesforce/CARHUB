@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Child to pparent Communications">
+        <div class="slds-var-m-around_medium">
+            <lightning-button label ="Show Modal window" onclick={clickHandlerToGetModal}></lightning-button>
+            <template if:true={showModal}>
+                <c-c2p-modal-component onmodalbutton={handleClick}></c-c2p-modal-component>
+            </template>
+            
+        </div>
+    </lightning-card>
+    
+</template>

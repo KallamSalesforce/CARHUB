@@ -1,0 +1,14 @@
+<aura:component controller="CL_CreateRetriveAcc">
+    <aura:attribute name="newAccount" type="Account" default="{sObjectType:'Account'}" />
+    <aura:registerEvent name="rupom" type="c:LE_EventWithData" />
+    <lightning:card title="Create Account">
+        <aura:set attribute="actions">
+        <lightning:button label="Save" onclick="{!c.callMe}" />
+        <lightning:button label="Clear" onclick="{!c.clearMe}" />
+            </aura:set>
+        <lightning:input label="Account Name" value="{!v.newAccount.Name}" />
+        <lightning:input label="Account Phone" value="{!v.newAccount.Phone}" />
+        <lightning:input label="Account Rating" value="{!v.newAccount.Rating}" />
+    </lightning:card>
+    
+</aura:component>

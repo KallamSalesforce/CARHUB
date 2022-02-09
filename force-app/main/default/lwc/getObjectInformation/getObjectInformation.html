@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Get Objecte details">
+        <div>
+            <p><strong>RecordType is</strong></p>{getRecordtypeId}
+            <p><strong>API NAME is</strong></p>{objApiName}
+        </div>
+        <template if:true={PicklistValuesAre}>
+            <p>Check Point</p>
+            <template for:each={PicklistValuesAre} for:item="item">
+                <p key={item.value}>{item.value}</p>
+
+            </template>
+        </template>
+    </lightning-card>
+</template>

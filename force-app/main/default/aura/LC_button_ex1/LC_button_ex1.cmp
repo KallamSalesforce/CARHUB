@@ -1,0 +1,17 @@
+<aura:component >
+   Hi This is my first lightning component
+    <br/>
+    <lightning:button label="submit" variant="brand"/>
+        <lightning:button label="cancel" variant="destructive"/>
+        <lightning:button label="save" variant="success"/>
+    <br/>
+    <br/>
+    <br/>
+    <lightning:button label="follow" iconName="Utility:adduser" />
+    <lightning:buttongroup>
+        <lightning:button label="New Contact" />
+        <lightning:button label="New Case" />
+        <lightning:button label="New Note" />
+    </lightning:buttongroup>
+    
+</aura:component>

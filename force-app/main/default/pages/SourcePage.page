@@ -1,0 +1,10 @@
+<apex:page controller="SourcePagecontroller" setup="false" showHeader="true" sidebar="false">
+  <apex:sectionHeader title="Source page" subtitle="Sorce page"/>
+    <apex:form >
+     <apex:pageBlock title="Source Page BLock">
+           <apex:pageblockButtons location="bottom">
+            <apex:commandButton value="Next Page"  action="{!getTargetPage}"/>
+           </apex:pageblockButtons>
+     </apex:pageBlock>
+    </apex:form>
+</apex:page>

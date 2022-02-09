@@ -1,0 +1,48 @@
+<template>
+    <!-- <lightning-card  variant="brand" icon-name="standard:opportunity">
+        <h1 slot="title">This is title</h1>
+        <h1>This is body</h1>
+        <div slot="actions">
+            <lightning-button icon-name="utility:down"></lightning-button>
+        </div>
+        <div slot="footer">Card Footer</div>
+    </lightning-card> -->
+    <div class ="slds-m-around_medium">
+        <c-customized-card-component>
+            <h1 slot="title">This is title</h1>
+            <h1>This is body</h1>
+            <div slot="actions">
+                <lightning-button icon-name="utility:down"></lightning-button>
+            </div>
+            <div slot="footer">Card Footer</div>
+        </c-customized-card-component>
+    </div>
+    
+    <div class ="slds-m-around_medium">
+        <c-customized-card-component>
+            <h1 slot="title">This card is without footer</h1>
+            <h1>This is body</h1>
+            <div slot="actions">
+                <lightning-button icon-name="utility:down"></lightning-button>
+            </div>
+        </c-customized-card-component>
+    </div>
+    
+    <div class ="slds-m-around_medium">
+        <c-customized-card-component>
+            <h1 slot="title">This card is without action</h1>
+            <h1>This is body</h1>
+            <div slot="footer">Card Footer</div>
+        </c-customized-card-component>
+
+    </div>
+     
+    <div class ="slds-m-around_medium">
+        <c-customized-card-component>
+            <h1 slot="title">This is card is with only Header</h1>
+            <h1>This is body</h1>
+        </c-customized-card-component>
+    </div>
+    
+   
+</template>

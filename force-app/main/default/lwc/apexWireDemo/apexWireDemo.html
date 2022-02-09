@@ -1,0 +1,30 @@
+<template>
+    <lightning-card title="Apex Wire Demo With No Params">
+        <div >
+            <template if:true={AccHandler.data}>
+               
+                    <template for:each={AccHandler.data} for:item="Account">
+                        <div class="slds-box slds-box_small" key={Account.Id}>
+                            <p><strong>Name</strong>{Account.Name }</P>
+                            <p><strong>Type</strong>{Account.Type }</P>
+                            <p><strong>Industry</strong>{Account.Industry}</P>       
+                        </div>     
+                    </template>
+                   
+            </template>
+        </div>
+    </lightning-card>
+    <lightning-card title="Apex Wire Demo With No Params and Transform  Data">     
+        <template if:true={accountList}>
+               
+            <template for:each={accountList} for:item="Account">
+                <div class="slds-box slds-box_small" key={Account.Id}>
+                    <p><strong>Name</strong>{Account.Name }</P>
+                    <p><strong>Type</strong>{Account.newType }</P>
+                    <p><strong>Industry</strong>{Account.Industry}</P>       
+                </div>     
+            </template>  
+        </template>
+    </lightning-card>
+
+</template>
