@@ -24,18 +24,4 @@ public class listToMap {
                   system.debug('Map values'+mapcon.values());
                   system.debug('Map values are'+mapcon);
     }
-
-    public static void converMaptoList(){
-        list<Contact> listOfCon = [SELECT Id,Name,AccountId,Email from Contact];
-        Map<Id,list<Contact>>  contactMap =  new Map<Id,list<Contact>>();
-        for(Contact con : listOfCon){
-            if(contactMap.containsKey(con.AccountId)){
-                contactMap.get(con.AccountId).add(con);
-            }
-            else{
-                contactMap.put(con.AccountId, new list<Contact> {con});
-            }
-        }
-      
-    }
 }
