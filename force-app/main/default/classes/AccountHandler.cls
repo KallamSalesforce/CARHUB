@@ -1,5 +1,5 @@
 public with sharing class AccountHandler {
-    //Master branch changes 
+    //Master branch changes 1
     @AuraEnabled(cacheable = true)
     public static list<Account> accDdetails(){
        
