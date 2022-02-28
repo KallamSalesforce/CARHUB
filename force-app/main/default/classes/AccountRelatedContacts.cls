@@ -17,7 +17,7 @@ public with sharing class AccountRelatedContacts {
         
     }
  
- // Wrapper Class
+ // Wrapper Class defined
  public class WrapperDemo {
         @AuraEnabled public Account objAcc {get;set;}
         @AuraEnabled public list<Contact> lstCons {get;set;}
